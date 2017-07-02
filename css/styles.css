@@ -1,0 +1,45 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-family: Arial, sans-serif;
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.4em;
+	margin: 1em;
+}
+
+p, ul, ol {
+	margin-bottom: 1rem;
+}
+
+table, form {
+	margin-bottom: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+h1 {
+	font-size: 2.8rem;
+}
+
+table {
+	font-size: 1.1rem;
+	border-collapse: collapse;
+}
+
+table th {
+	background-color: yellow;
+}
+
+table th, table td {
+	border: 1px solid black;
+	padding: 0.5rem;
+}
