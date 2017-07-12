@@ -30,6 +30,44 @@ h1 {
 	font-size: 2.8rem;
 }
 
+a, a:visited {
+	color: #039BE5;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+ul li {
+	list-style-position: inside;
+	margin-bottom: 0.5em;
+}
+
+.error {
+	color: red;
+}
+
+/* controllers */
+.controls {
+	padding: 1em;
+	margin-top: 1.5em;
+	background-color: black;
+	color: white;	
+}
+
+.controls label {
+	font-weight: bold;	
+}
+
+.controls select {
+	margin-right: 1em;
+}
+
+/* tables */
 table {
 	font-size: 1.1rem;
 	border-collapse: collapse;
@@ -41,5 +79,35 @@ table th {
 
 table th, table td {
 	border: 1px solid black;
-	padding: 0.5rem;
+	padding: 0.5em;
+}
+
+table a {
+	font-weight: bold;
+}
+
+#errorMsg, #estimations table.titles {
+	display: none;
+}
+
+.cover-col {
+	width: 150px;
+}
+
+#estimations table.titles img.cover {
+	width: 100%;
+}
+
+/* eBay results row */
+.ebayResults {
+	display: none;
+}
+
+.ebayResults > td {
+	background-color: #EEE;
+	padding: 1em 0 0 2em;
+}
+
+.ebayResults table td {
+	background-color: white;
 }
