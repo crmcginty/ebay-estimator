@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Comics DB - price estimator</title>
+  <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <h1>eBay estimation</h1>
+    <ul>
+      <li>Titles limited to 10 in an attempt to keep eBay requests down</li>
+      <li>Publisher drop-down to be incorporated</li>
+      <li>Plus more to do e.g. make table load sleek, device work/testing etc&hellip;</li>
+    </ul>
+
+    <div class="controls">
+        <label>Publisher
+          <select id="publisher">
+            <option value="0" selected>All</option>
+          </select>
+        </label>
+        <label>Limit titles
+          <select id="limit"></select>
+        </label>
+    </div>
+
+    <p id="errorMsg" class="error">Titles could not be retrieved. Please check the console for errors.</p>
+
+    <div id="estimations">
+      <table class="titles">
+        <thead>
+          <tr>
+            <th>Limit index</th>
+            <th>DB ID</th>
+            <th class="cover-col">Cover</th>
+            <th>eBay query</th>            
+            <th>eBay estimate</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="scripts/jquery-3.2.1.min.js"></script>
+  <script src="scripts/cdb-scripts.js"></script>
+</body>
+</html>
