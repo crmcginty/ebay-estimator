@@ -12,7 +12,7 @@ class DB {
         // Try and connect to the database
         if(!isset(self::$connection)) {
             // Load configuration as an array
-            $config = parse_ini_file('../../../config/config_comics.ini');
+            $config = parse_ini_file('../../../../config/config_comics.ini');
             self::$connection = new PDO("mysql:host=".$config["host"].";dbname=".$config["dbname"].";charset=utf8mb4",$config['username'],$config['password']);
         }
 

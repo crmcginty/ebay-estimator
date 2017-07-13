@@ -1,6 +1,6 @@
 <?php
 
-  $config = parse_ini_file("../../../config/config_comics.ini");
+  $config = parse_ini_file("../../../../config/config_comics.ini");
 
   $query = $_GET['keywords'];
 
@@ -16,13 +16,23 @@
   $apicall .= "OPERATION-NAME=findCompletedItems";
   $apicall .= "&SERVICE-VERSION=$version";
   $apicall .= "&SECURITY-APPNAME=$appid";
+  $apicall .= "&RESPONSE-DATA-FORMAT=XML";
   $apicall .= "&GLOBAL-ID=$globalid";
   $apicall .= "&keywords=$safequery";
   $apicall .= "&paginationInput.entriesPerPage=5";
 
-  // Load the call and capture the document returned by eBay API
-  $resp = simplexml_load_file($apicall);
+  // Get cURL resource
+  $curl = curl_init();
+  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); // Disable SSL verification
+  curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($curl, CURLOPT_URL,$apicall);
+  // Execute request
+  $resp = curl_exec($curl);
+  // Close request
+  curl_close($curl);
+  // Return the results
+  $resp = simplexml_load_string($resp);
+  echo json_encode($resp);
 
-  echo json_encode($resp); // Return the results as JSON
   exit;
 ?>

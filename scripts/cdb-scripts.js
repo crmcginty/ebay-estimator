@@ -72,7 +72,7 @@
 			// TIDY THIS UP (TEMPLATING?)
 			$("#estimations tbody").append("<tr id='title_" + title.id + "'></tr>"); // Create a new table row
 			$("#estimations tbody tr:last").append("<td>" + (limits[0]+i) + "</td>"); // Limit index
-			$("#estimations tbody tr:last").append("<td>" + title.id + "</td>" + "<td><img class='cover' src='img\\title_" + title.id + ".jpg' alt=''></td>"); // ID and cover image
+			$("#estimations tbody tr:last").append("<td>" + title.id + "</td>" + "<td><img class='cover' src='\\img\\title_" + title.id + ".jpg' alt=''></td>"); // ID and cover image
 			$("#estimations tbody tr:last").append("<td class='keywords'><strong>No eBay results found</strong></td>"); // eBay keywords and results
 			$("#estimations tbody tr:last").append("<td class='estimate'>&pound;" + DEFAULT_PRICE.toFixed(2) + "</td>"); // Estimated price
 		});
