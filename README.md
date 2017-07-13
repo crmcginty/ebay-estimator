@@ -1,5 +1,5 @@
 # eBay comic price estimator
-## <a href="http://anthonymcginty.com/comics/estimator/" target="_blank">View it working here</a>
+## <a target="_blank" href="http://anthonymcginty.com/comics/estimator/">View it working here</a>
 
 ## Overview
 This is still work in progress... here's an overview on the basics of how it's put together:
