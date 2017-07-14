@@ -12,7 +12,6 @@ This is still work in progress... here's an overview on the basics of how it's p
 
 ## What's next
 * Finding the optimal eBay query/keywords: some of the current results aren't reliable for calculating the price
-* Remove reliance on the Comics DB: looking to call JSON from the server to improve performance and reliability
 * Extending/Improving the front-end: implementing the publisher drop-down and other search mechanisms, reviewing the layout on devices, the list goes on...
 * Updating the DB with price estimates: my plan is to save the estimated prices to a file (probably CSV). This would take place as eBay is queried from the page and a bulk action will also be built. 
 
